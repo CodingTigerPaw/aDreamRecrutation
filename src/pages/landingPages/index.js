@@ -11,7 +11,7 @@ const LandingPage = () =>{
 
    const someImage =(state)=>{
      if(counter >= 3){
-       counter = -1
+       counter = 0
      }
      if(state ==='next'){
 
