@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { useState, useEffect } from 'react'
+import  {Link}  from 'gatsby'
+import { useState }from 'react'
+import  {useEffect } from 'react'
 import './main.scss'
 
 const LandingPage = () =>{

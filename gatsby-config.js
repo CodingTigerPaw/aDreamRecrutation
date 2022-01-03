@@ -5,6 +5,7 @@ module.exports = {
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
+  pathPrefix: "/aDreamRecrutation",
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
