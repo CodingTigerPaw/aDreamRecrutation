@@ -1,0 +1,77 @@
+
+$yellowHeight: 50px;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.Office{
+    width: 100%;
+    background-color: #fff;
+}
+
+.info{
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    &__background{
+        opacity: 0.75;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: ease-in-out 0.5s all;
+    }
+    &__whiteBox{
+        margin: 10px 0 0 10px;
+        position: relative;
+        width: 33%;
+        height: 40%;
+        background-color: #fff;
+    }
+    &__yellowBox{
+        position: relative;
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+        background-color: yellow;
+    }
+    &__title{
+        position: relative;
+        font-size: 20px;
+        top: -15px;
+        left: 15px;
+        font-weight: bold;
+        z-index: 1;
+    }
+    &__textBox{
+        position: relative;
+        left: 15px;
+    }
+    &__arrow{
+        position: relative;
+        left: calc(100% - 100px); 
+        bottom: calc(100% - 370px);
+        height: 100px;
+        width: 100px;
+        background-color:#333;
+        background-image: url(./components/Mask_Group_3.png);
+        background-size: cover;
+    }
+}
+
+.info:hover .info__background{
+    transform: scale(1.15);
+}
+
+.info__arrrow:hover{
+    background-color: #000;
+}
+
+.info__textBox::before{
+    display: block;
+    content: '';
+    width: 50px;
+    height: 4px;
+    background-color: #000;
+}

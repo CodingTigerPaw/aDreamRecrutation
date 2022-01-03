@@ -1,0 +1,22 @@
+
+.ownOffice{
+    background-image: url(./Group258.png);
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+.ownOffice::after{
+    content: '';
+    display: block;
+    width: 200px;
+    height: 10px;
+    background-color: #000;
+}
+.symbol{
+    background-image: url(./Group576.png);
+    background-repeat: no-repeat;
+    height: 150px;
+}
+.position{
+    margin-top: -3rem;
+    margin-left: 10rem;
+}

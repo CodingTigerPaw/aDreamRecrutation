@@ -1,0 +1,220 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap);
+
+*{
+    margin: 0;
+    padding: 0
+}
+
+$padding: 60px; 
+$mainFont:"Poppins", Georgia, 'Times New Roman', Times, serif;
+$height: 100vh;
+
+body{
+    margin-top: 0;
+    margin-left: 0;
+    
+    height: 100vh;
+    width: 100%;
+    font-family: $mainFont;
+}
+
+.background{
+     background-image: url('./shutterstock_615439679.png');
+     height: $height;
+}
+.background-2{
+    background-image: url('./shutterstock_1790190785.png');
+    height: $height;
+}
+.background-3{
+    background-image: url('./shutterstock_1090078049.png');
+    height: $height;
+}
+.navigation{
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+    font-family: $mainFont;
+    &__list{
+        list-style-type: none;
+        margin-left: 20px;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__listItem{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        &:after{
+            display: block;
+            content: '';
+            width: 5px;
+            opacity: 0;
+            height: 2px;
+            background-color: #fff;
+            margin-right: 50px;
+            transition: all ease-in-out 0.2s;
+            margin-left: auto;
+            margin-right: auto;
+        
+        }
+    }
+}
+.logo{
+    width: 250px;
+    font-size: 40px;
+    text-align: center;
+    font-family: $mainFont;
+}
+
+
+.navigation__listItem:hover::after{
+    width: 100%;
+    opacity: 1;
+}
+.navigation__link, .navigation__link:visited, .navigation__link:active{
+    color: white;
+    text-decoration: none;
+}
+.main{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: $padding;
+    width: 60%;
+    align-self: flex-end;
+    &__header{
+        font-family: $mainFont;
+        color: white;
+        font-size: 60px;
+        margin-bottom: 40px
+    }
+    &__text{
+        font-family: $mainFont;
+        padding-bottom: 3rem;
+        font-size:  35px;
+        color: white;
+    }
+}
+
+.middle{
+    display: flex;
+    flex-direction: row;
+}
+.contactBox{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 100%;
+    padding: 15px;;
+    background-color: #fff;
+    &__text{
+        font-size: 14;
+        color: grey
+    }
+    &__text--bold{
+        font-weight: bold;
+
+    }
+    &__form{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;   
+    }
+}
+.form{
+    &__input{
+        font-size: 14px;
+        padding-left: 10px;
+        margin: 10px 0 10px 0;
+        height: 40px;
+        border: 1px black solid
+    }
+    &__checkboxText{
+        padding-left: 5px;
+        font-size: 0.75rem;
+    }
+    &__submit{
+        margin-top: 1rem;
+        box-sizing: content-box;
+        position: relative;
+        width: 100%;
+        height: 2rem;
+        border: #333 solid 1px;
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+        cursor: pointer
+    }
+}
+
+
+.form__submitText{
+    z-index: -1;
+}
+.form__submit:after{
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 2rem;
+    background-color: yellow;
+    width: 100%;
+    z-index: -2
+}
+.arrows{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.arrowLeft, .arrowRight{
+    width: 5rem;
+    height: 5rem;
+    background-color: #fff;
+    transition: ease-in 0.2s all;
+}
+.arrowLeft:hover, .arrowRight:hover{
+    filter: invert(100%);
+}
+.arrowRight{
+    border-left: #333 solid 1px;
+    background-image: url('./Arrow.png');
+    background-position: center;
+}
+.arrowLeft{
+    background-image: url('./Arrow.png');
+    background-position: center;
+    transform-origin: center;
+    transform: rotate(180deg);
+}
+
+.progressBar{
+    margin-left: 10px;
+    width: 10rem;
+    height: 0.75rem;
+    background-color: #fff;
+    border-radius: 3px;
+}
+.progressBar:after{
+    display: block;
+    border-radius: 3px;
+    content: '';
+    width: 0;
+    height:0.75rem;
+    background-color: black;
+    animation: loading 10s infinite  ;
+    animation-timing-function: linear;
+}
+
+@keyframes loading{
+    from {width: 0;}
+    to {width: 10rem;}
+}
